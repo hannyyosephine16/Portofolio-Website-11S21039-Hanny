@@ -70,51 +70,7 @@ downloadCvButton.addEventListener("click", function () {
   // Anda dapat mengganti cvUrl dengan URL yang sesuai dengan CV Anda
 });
 
-// function Sample() {
-//   var iRow;
-//   var objExcel = new ActiveXObject("Excel.Application");
-//   var objWorkbook = objExcel.Workbooks.Open("D:\\Mata Kuliah IT DEL\\Semester 5\\Pabwe\\Praktikum\\Website Portofolio\\form.xlsx");
-//   objExcel.Application.Visible = true;
-//   objWorkbook.Windows(1).Visible = true;
-//   var XlSheet = objWorkbook.Sheets(1);
-//   XlSheet.Activate();
-//   iRow = 1;
 
-//   // Mencari baris terakhir dengan data
-//   while (XlSheet.Cells(iRow, 1).Value !== "") {
-//       iRow = iRow + 1;
-//   }
-
-//   // Mengambil nilai dari input formulir HTML
-//   var fname = document.querySelector('input[name="fullname"]').value;
-//   var email = document.querySelector('input[name="mobile"]').value;
-//   var mobile = document.querySelector('input[name="email"]').value;
-//   var subject = document.querySelector('input[name="subject"]').value;
-//   var message = document.querySelector('textarea[name="message"]').value;
-
-//   // Menambahkan data ke file Excel
-//   XlSheet.Cells(iRow, 1).Value = fname;
-//   XlSheet.Cells(iRow, 2).Value = email;
-//   XlSheet.Cells(iRow, 3).Value = mobile;
-//   XlSheet.Cells(iRow, 4).Value = subject;
-//   XlSheet.Cells(iRow, 5).Value = message;
-
-//   // Menampilkan pesan sukses
-//   alert("Data Added Successfully");
-
-//   // Mengosongkan input formulir HTML
-//   document.querySelector('input[name="fullname"]').value = "";
-//   document.querySelector('input[name="mobile"]').value = "";
-//   document.querySelector('input[name="email"]').value = "";
-//   document.querySelector('input[name="subject"]').value = "";
-//   document.querySelector('textarea[name="message"]').value = "";
-
-//   // Menyimpan dan menutup file Excel
-//   objWorkbook.Save();
-//   objWorkbook.Close();
-//   objWorkbook = null;
-//   objExcel = null;
-// }
 document.addEventListener("DOMContentLoaded", function () {
   const form = document.querySelector("form");
   form.addEventListener("submit", function (event) {
@@ -132,20 +88,4 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 });
-// function Sample() {
-//     var fname = document.querySelector('input[name="fullname"]').value;
-//     var mobile = document.querySelector('input[name="mobile"]').value;
-//     var email = document.querySelector('input[name="email"]').value;
-//     var subject = document.querySelector('input[name="subject"]').value;
-//     var message = document.querySelector('textarea[name="message"]').value;
 
-//     // Jika Anda ingin menampilkan data yang dikumpulkan di console
-//     console.log("Full Name: " + fname);
-//     console.log("Mobile: " + mobile);
-//     console.log("Email: " + email);
-//     console.log("Subject: " + subject);
-//     console.log("Message: " + message);
-
-//     // Anda bisa menambahkan kode di sini untuk menyimpan data ke file Excel
-//     // Namun, ini akan menjadi tugas yang kompleks dan tidak praktis di sisi klien.
-// }
