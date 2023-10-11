@@ -43,32 +43,7 @@ window.onscroll = () => {
   navbar.classList.remove("active");
 };
 
-// // Ambil referensi tombol "Let's Talk" dengan menggunakan ID atau selector lainnya
-// const letsTalkButton = document.querySelector('.btn-lets-talk');
 
-// // Tambahkan event listener untuk mendengarkan klik pada tombol
-// letsTalkButton.addEventListener('click', function() {
-//   // Implementasikan apa yang harus dilakukan saat tombol diklik di sini
-//   alert('Terima kasih telah mengklik tombol "Let\'s Talk"');
-//   // Anda dapat mengganti alert di atas dengan tindakan lain yang sesuai dengan kebutuhan Anda
-// });
-
-// Ambil referensi tombol "Download CV" dengan menggunakan ID atau selector lainnya
-const downloadCvButton = document.querySelector(".btn-download-cv");
-
-// Tambahkan event listener untuk mendengarkan klik pada tombol
-downloadCvButton.addEventListener("click", function () {
-  // Gantilah URL berikut dengan URL tempat Anda menyimpan CV untuk diunduh
-  const cvUrl =
-    "https://drive.google.com/file/d/172qrlMRetQTpGETXvYqcvbVqYYbvfR2f/view?usp=sharing";
-
-  // Buka CV dalam tab atau jendela baru
-  window.open(cvUrl, "_blank");
-  // Atau Anda juga dapat mengarahkan pengguna untuk mengunduh CV dengan menggunakan metode ini:
-  // window.location.href = cvUrl;
-
-  // Anda dapat mengganti cvUrl dengan URL yang sesuai dengan CV Anda
-});
 
 
 document.addEventListener("DOMContentLoaded", function () {
@@ -76,16 +51,17 @@ document.addEventListener("DOMContentLoaded", function () {
   form.addEventListener("submit", function (event) {
     event.preventDefault();
 
-    var fname = document.querySelector('input[name="fullname"]').value;
+    var fname = document.querySelector('input[name="name"]').value;
     var mobile = document.querySelector('input[name="mobile"]').value;
     var email = document.querySelector('input[name="email"]').value;
     var subject = document.querySelector('input[name="subject"]').value;
     var message = document.querySelector('textarea[name="message"]').value;
 
     if (fname.trim() === "") {
-      alert("fullname masih kosong");
+      alert("Form masih kosong");
       return;
     }
   });
 });
+
 
