@@ -32,6 +32,8 @@ html{
 body{
   background: var(--bg-color);
   color: var(--text-color);
+  /* display: flex;
+  min-height: 100vh; */
 }
 
 .header{
@@ -724,17 +726,102 @@ span{
   margin: .8rem 0 2.rem;
 }
 
-.footer {
+footer{
+  position: relative ;
+  width: 100%;
+  bottom: 0;
+  background: linear-gradient(to right, #00093c, #002147);
+  color: #ffff;
+  padding: 100px 0 30px;
+  font-size: 13px;
+  line-height: 20px;
+
+}
+
+.row{
+  width: 85%;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.col{
+  flex-basis: 25%;
+  padding: 10px;
+  margin-top:10px ;
+}
+
+.col:nth-child(2), .col:nth-child(3){
+  flex-basis: 15%;
+}
+
+.logo{
+  width: 80px;
+  margin-bottom: 30px;
+}
+
+.col p{
+  text-align: justify;
+}
+
+.col h3{
+  width: fit-content;
+  margin-bottom: 40px;
+  position: relative;
+}
+
+.email-id{
+  width: fit-content;
+  border-bottom: 1px solid #ccc;
+  margin: 20px 0;
+
+}
+
+ul li{
+  list-style: none;
+  margin-bottom: 12px;
+
+}
+
+ul li a{
+  text-decoration: none;
+  color: #ededed;
+}
+
+.social-icons .fa-brands{
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 40px;
+  font-size: 20px;
+  color: var(--scecond-bg-color);
+  background: var(--main-color);
+  margin-right: 15px;
+  cursor: pointer;
+  margin-top: 75px;
+}
+
+.footer .footer-iconTop {
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
   padding: 2rem 9%;
   background: var(--scecond-bg-color);
-}
+} 
 
 .footer-text p{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 2rem 9%;
   font-size: 1.6rem;
+  
+  color: #ededed;
 }
 
 .footer-iconTop{
@@ -748,6 +835,10 @@ span{
   border-radius: .6rem;
   z-index: 1;
   overflow: hidden;
+  justify-content: space-between;
+  align-items: center;
+
+  
 }
 
 .footer-iconTop a::before{
