@@ -343,359 +343,64 @@ span {
   opacity: .8;
 }
 
-/* ===== ABOUT SECTION WITH SIDEBAR ===== */
-.about-layout {
-  display: grid;
-  grid-template-columns: 2fr 1fr;
-  gap: 5rem;
-  align-items: start;
+/* ===== ABOUT SECTION ===== */
+.about {
+  background: var(--second-bg-color);
 }
 
-.about-main {
-  width: 100%;
-}
-
-/* About Sidebar Styling */
-.about-sidebar {
+.about-wrapper {
   display: flex;
   flex-direction: column;
-  gap: 3rem;
+  align-items: center;
+  gap: 4rem;
 }
 
-.sidebar-widget {
-  background: var(--bg-color);
-  border: .2rem solid var(--main-color);
-  border-radius: 1rem;
-  padding: 2.5rem;
-  transition: var(--transition);
+.about-img {
   position: relative;
+  width: 30rem;
+  height: 30rem;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   overflow: hidden;
 }
 
-.sidebar-widget::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 0;
-  height: 100%;
-  background: var(--main-color);
-  z-index: -1;
+.about-img img {
+  width: 90%;
+  border-radius: 45%;
+  border: .2rem solid var(--main-color);
   transition: var(--transition);
-  opacity: 0.05;
 }
 
-.sidebar-widget:hover::before {
-  width: 100%;
+.about-img:hover img {
+  transform: scale(1.1);
 }
 
-.sidebar-widget:hover {
-  transform: translateY(-0.5rem);
-  box-shadow: 0 1rem 2rem rgba(255, 165, 0, 0.1);
-}
-
-/* Profile Widget */
-.profile-widget .widget-header {
+.about-content {
   text-align: center;
+  max-width: 70rem;
+  margin: 0 auto;
+}
+
+.about-content h3 {
+  font-size: 2.6rem;
+  color: var(--main-color);
+  margin-bottom: 1.5rem;
+}
+
+.about-content p {
+  font-size: 1.6rem;
   margin-bottom: 2rem;
+  line-height: 1.7;
 }
 
-.profile-thumb {
-  width: 8rem;
-  height: 8rem;
-  border-radius: 50%;
-  border: .3rem solid var(--main-color);
-  margin-bottom: 1.5rem;
-  object-fit: cover;
-}
-
-.widget-header h4 {
-  font-size: 2rem;
-  color: var(--main-color);
-  margin-bottom: 0.5rem;
-  font-weight: 600;
-}
-
-.widget-header span {
-  font-size: 1.4rem;
-  color: var(--text-color);
-  opacity: 0.8;
-}
-
-.profile-stats {
-  display: flex;
-  justify-content: space-around;
-  margin-top: 2rem;
-}
-
-.stat {
-  text-align: center;
-}
-
-.stat .number {
-  display: block;
-  font-size: 2.4rem;
-  font-weight: 700;
-  color: var(--main-color);
-  line-height: 1;
-}
-
-.stat .label {
-  font-size: 1.3rem;
-  color: var(--text-color);
-  opacity: 0.7;
-  margin-top: 0.5rem;
-}
-
-/* Widget Titles */
-.widget-title {
-  font-size: 1.8rem;
-  color: var(--main-color);
-  margin-bottom: 1.5rem;
-  font-weight: 600;
-  position: relative;
-  padding-bottom: 1rem;
-}
-
-.widget-title::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 3rem;
-  height: 0.2rem;
-  background: var(--main-color);
-}
-
-/* Facts Widget */
-/* Facts Widget - Update hover effect untuk teks putih */
-.facts-list li {
-  display: flex;
-  align-items: center;
-  margin-bottom: 1.5rem;
-  padding: 1rem;
-  border-radius: 0.5rem;
-  background: var(--second-bg-color);
-  transition: var(--transition);
-}
-
-.facts-list li:hover {
-  background: var(--main-color);
-  color: var(--bg-color);
-}
-
-.facts-list li i {
-  font-size: 2rem;
-  color: var(--main-color);
-  margin-right: 1.5rem;
-  min-width: 2rem;
-  transition: var(--transition);
-}
-
-.facts-list li:hover i {
-  color: var(--bg-color);
-}
-
-.facts-list li span {
-  font-size: 1.4rem;
-  line-height: 1.4;
-  color: var(--text-color); 
-  transition: var(--transition);
-}
-
-.facts-list li:hover span {
-  color: var(--bg-color); 
-}
-/* .facts-list {
-  list-style: none;
-}
-
-.facts-list li {
-  display: flex;
-  align-items: center;
-  margin-bottom: 1.5rem;
-  padding: 1rem;
-  border-radius: 0.5rem;
-  background: var(--second-bg-color);
-  transition: var(--transition);
-}
-
-.facts-list li:hover {
-  background: var(--main-color);
-  color: var(--bg-color);
-}
-
-.facts-list li i {
-  font-size: 2rem;
-  color: var(--main-color);
-  margin-right: 1.5rem;
-  min-width: 2rem;
-}
-
-.facts-list li:hover i {
-  color: var(--bg-color);
-}
-
-.facts-list li span {
-  font-size: 1.4rem;
-  line-height: 1.4;
-} */
-
-/* Contact Widget */
-.contact-item {
-  display: flex;
-  align-items: center;
-  margin-bottom: 1.5rem;
-  padding: 1rem;
-  border-radius: 0.5rem;
-  background: var(--second-bg-color);
-  transition: var(--transition);
-}
-
-.contact-item:hover {
-  background: var(--main-color);
-  color: var(--bg-color);
-}
-
-.contact-item i {
-  font-size: 1.8rem;
-  color: var(--main-color);
-  margin-right: 1.5rem;
-  min-width: 2rem;
-  transition: var(--transition);
-}
-
-.contact-item:hover i {
-  color: var(--bg-color);
-}
-
-.contact-item span {
-  font-size: 1.3rem;
-  word-break: break-all;
-  color: var(--text-color); /* Default color */
-  transition: var(--transition);
-}
-
-/* Update: Pastikan teks span juga berubah jadi putih saat hover */
-.contact-item:hover span {
-  color: var(--bg-color); /* Teks jadi putih saat hover */
-}
-
-/* .contact-item {
-  display: flex;
-  align-items: center;
-  margin-bottom: 1.5rem;
-  padding: 1rem;
-  border-radius: 0.5rem;
-  background: var(--second-bg-color);
-  transition: var(--transition);
-}
-
-.contact-item:hover {
-  background: var(--main-color);
-  color: var(--bg-color);
-}
-
-.contact-item i {
-  font-size: 1.8rem;
-  color: var(--main-color);
-  margin-right: 1.5rem;
-  min-width: 2rem;
-}
-
-.contact-item:hover i {
-  color: var(--bg-color);
-}
-
-.contact-item span {
-  font-size: 1.3rem;
-  word-break: break-all;
-} */
-
-.social-links {
-  display: flex;
-  gap: 1rem;
-  margin-top: 2rem;
-  justify-content: center;
-}
-
-.social-links a {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 4rem;
-  height: 4rem;
-  background: var(--main-color);
-  color: var(--bg-color);
-  border-radius: 50%;
-  font-size: 1.8rem;
-  transition: var(--transition);
-}
-
-.social-links a:hover {
-  background: var(--text-color);
-  transform: translateY(-0.3rem);
-}
-
-/* Skills Widget */
-.skill-tag {
+.btn-box.btns {
   display: inline-block;
-  background: var(--main-color);
-  color: var(--bg-color);
-  padding: 0.8rem 1.5rem;
-  border-radius: 2rem;
-  font-size: 1.3rem;
-  font-weight: 500;
-  margin: 0.5rem 0.5rem 0.5rem 0;
-  transition: var(--transition);
+  width: 15rem;
+  margin: 0 auto;
 }
 
-.skill-tag:hover {
-  background: var(--text-color);
-  transform: scale(1.05);
-}
-
-/* Responsive Design */
-@media (max-width: 991px) {
-  .about-layout {
-    grid-template-columns: 1fr;
-    gap: 4rem;
-  }
-  
-  .about-sidebar {
-    order: -1;
-  }
-  
-  .sidebar-widget {
-    padding: 2rem;
-  }
-}
-
-@media (max-width: 768px) {
-  .about-sidebar {
-    gap: 2rem;
-  }
-  
-  .profile-thumb {
-    width: 6rem;
-    height: 6rem;
-  }
-  
-  .profile-stats {
-    flex-direction: column;
-    gap: 1rem;
-  }
-  
-  .social-links {
-    gap: 0.5rem;
-  }
-  
-  .social-links a {
-    width: 3.5rem;
-    height: 3.5rem;
-    font-size: 1.6rem;
-  }
-}
 /* ===== EDUCATION SECTION ===== */
 .education .education-row {
   display: flex;
